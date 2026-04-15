@@ -5,8 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Game</title>
     <link rel="stylesheet" href="quiz-game.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+    />
   </head>
   <body>
+    <div class="quiz-container">
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+
+      <p id="progress-text"></p>
+      <h2 id="question">Question goes here</h2>
+
+      <div id="answers"></div>
+
+      <button id="next-btn">Next</button>
+
+      <div id="score-container" class="hidden">
+        <h2 id="score-text"></h2>
+        <button id="restart-btn">Restart Quiz</button>
+      </div>
+    </div>
     <script src="quiz-game.js"></script>
   </body>
 </html>
