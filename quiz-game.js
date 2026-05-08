@@ -72,11 +72,11 @@ function selectAnswer(selectedIndex) {
     btn.disabled = true;
     if (index === currentQuestion.correct) {
       btn.classList.add("correct");
-    } else if (index === selectedIndex) {
+    } else if (index === currentQuestion.wrong) {
       btn.classList.add("wrong");
     }
+    nextBtn.style.display = "block";
   });
-  nextBtn.style.display = "block";
 }
 
 nextBtn.addEventListener("click", () => {
