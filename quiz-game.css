@@ -67,6 +67,11 @@ overflow: hidden;
   transform: scale(1.02);
 }
 
+#answers button:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
 button {
   padding: 10px;
   border: none;
