@@ -63,26 +63,20 @@ function showQuestion() {
 }
 
 function selectAnswer(selectedIndex) {
-const currentQuestion = questions[currentQuestionIndex];
-
-const buttons = answersEl.querySelectorAll("button");
-
-if (selectedIndex === currentQuestion.correct) {
-  score++;
- }
-
-
-buttons.forEach((btn, index) => {
- if (index === currentQuestion.correct) {
-  btn.classList.add("correct");
- } else if (index === selectedIndex) {
-  btn.classList.add("wrong");
- }
-
- btn.disabled = true;
-
- nextBtn.style.display = "block";
-});
+  const currentQuestion = questions[currentQuestionIndex];
+  const buttons = answersEl.querySelectorAll("button");
+  if (selectedIndex === currentQuestion.correct) {
+    score++;
+  }
+  buttons.forEach((btn, index) => {
+    btn.disabled = true;
+    if (index === currentQuestion.correct) {
+      btn.classList.add("correct");
+    } else if (index === selectedIndex) {
+      btn.classList.add("wrong");
+    }
+  });
+  nextBtn.style.display = "block";
 }
 
 nextBtn.addEventListener("click", () => {
