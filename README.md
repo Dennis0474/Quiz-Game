@@ -58,15 +58,10 @@ Open `quiz-game.js` and add objects to the `questions` array:
   correct: 0  // index of the correct answer (0-based)
 }
 ```
-
----
-
-## 📄 License
-
+## 📄 License  
 This project is open source and available under the [MIT License](LICENSE).
-
 ---
 
 ## 🙌 Author
 
-Made by **[Your Name](https://github.com/your-username)**
+Made by **[Dennis](https://github.com/Dennis0474)**
