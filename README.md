@@ -6,7 +6,7 @@ A fun, interactive browser-based quiz game built with vanilla HTML, CSS, and Jav
 
 ## 🚀 Live Demo
 
-> [Click here to play](https:dennis0474.github.io/Quiz-Game/)
+> [Click here to play](https://dennis0474.github.io/Quiz-Game/)
 
 
 ## ✨ Features
