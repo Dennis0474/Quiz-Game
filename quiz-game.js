@@ -28,6 +28,7 @@ const questions = [
 
 let currentQuestionIndex = 0;
 let score = 0;
+let answered = false;
 
 const questionEl = document.getElementById("question");
 const answersEl = document.getElementById("answers");
@@ -63,23 +64,28 @@ function showQuestion() {
 }
 
 function selectAnswer(selectedIndex) {
+  if (answered) return;
+  answered = true;
+  
   const currentQuestion = questions[currentQuestionIndex];
   const buttons = answersEl.querySelectorAll("button");
   if (selectedIndex === currentQuestion.correct) {
     score++;
   }
   buttons.forEach((btn, index) => {
-    btn.disabled = true;
+    btn.style.pointerEvents = "none";
+    
     if (index === currentQuestion.correct) {
       btn.classList.add("correct");
     } else if (index === currentQuestion.wrong) {
       btn.classList.add("wrong");
-    }
-    nextBtn.style.display = "block";
+    } 
   });
+  nextBtn.style.display = "block";
 }
 
 nextBtn.addEventListener("click", () => {
+  answered = false;
   currentQuestionIndex++;
 
   if (currentQuestionIndex < questions.length) {
@@ -102,6 +108,7 @@ function showScore() {
 restartBtn.addEventListener("click", () => {
   currentQuestionIndex = 0;
   score = 0;
+  answered = false;
 
   scoreContainer.classList.add("hidden");
   questionEl.style.display = "block";
