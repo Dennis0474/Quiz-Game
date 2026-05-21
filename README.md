@@ -62,6 +62,9 @@ Open `quiz-game.js` and add objects to the `questions` array:
 This project is open source and available under the [MIT License](LICENSE).
 ---
 
+## 📫 Contact
+- Email: dennisegheosaomoyibo@gmail.com
+
 ## 🙌 Author
 
 Made by **[Dennis](https://github.com/Dennis0474)**
