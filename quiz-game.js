@@ -77,7 +77,7 @@ function selectAnswer(selectedIndex) {
     
     if (index === currentQuestion.correct) {
       btn.classList.add("correct");
-    } else if (index === currentQuestion.wrong) {
+    } else if (index === selectedIndex) {
       btn.classList.add("wrong");
     } 
   });
